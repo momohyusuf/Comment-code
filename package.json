@@ -1,0 +1,68 @@
+{
+  "name": "comment-code",
+  "displayName": "Comment code",
+  "description": "Easily add better descriptive comments to your code",
+  "version": "1.8.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "comments",
+    "write",
+    "code readability",
+    "AI",
+    "Google Gemini"
+  ],
+  "publisher": "starkweb-technologies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/momohyusuf/Comment-code.git"
+  },
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "comment-code.start",
+        "title": "Add comments"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "comment-code.start"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "comment-code.start",
+        "label": "Add comments"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1"
+  },
+  "icon": "icon.png"
+}
